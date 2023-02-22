@@ -1,8 +1,8 @@
-# Departure Labs ICRC 1 - Interface Support
+# Departure Labs DLIP 1 - Interface Support
 
 ```
 version : v0
-interface_identifier : DL::ICRC_1
+interface_identifier : DL::DLIP_1
 ```
 
 ## References
@@ -33,7 +33,7 @@ To avoid conflicts, implementers **must** publish interface identifiers in the f
 string_concat("{}::{}", GROUP, STANDARD_IDENTIFIER)
 ```
 
-Here, `GROUP` refers to the group or organization that published the standard and `STANDARD_IDENTIFIER` is a unique identifier for the standard. For example, the `DL::ICRC_1` identifier is used for this Departure Labs ICRC 1 standard.
+Here, `GROUP` refers to the group or organization that published the standard and `STANDARD_IDENTIFIER` is a unique identifier for the standard. For example, the `DL::ICRC_1` identifier is used for this Departure Labs DLIP 1 standard.
 
 
 

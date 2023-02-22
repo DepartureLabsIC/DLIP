@@ -1,9 +1,9 @@
-# Departure Labs ICRC 2 - Simple Canister Events
+# Departure Labs DLIP 2 - Simple Canister Events
 
 ```
 version : v0
-interface_identifier : DL::ICRC_2v0
-supports : DL::ICRC_1
+interface_identifier : DL::DLIP_2v0
+supports : DL::DLIP_1
 ```
 
 ## Summary
@@ -94,7 +94,7 @@ service : {
 Unsubscribe from the canister events using the `dl_remove_simple_subscription` method when the subscription is no longer needed.
 
 ### Getting Schema Information
-To get information about the canister, the integrator can call the `dl_canister_events_information` method, which returns a canister_event_information record that includes a link to the schema of the event. Please refer to the link for more specific details about how to interpret the payload
+To get information about the canister, the integrator can call the `dl_canister_events_information` method, which returns a `canister_event_information` record that includes a link to a schema describing the events of the canister. Please refer to the link for more specific details about how to interpret the payload
 
 
 

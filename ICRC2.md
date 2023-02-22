@@ -68,6 +68,36 @@ service : {
 ### `dl_canister_events_information`
 A method that takes no arguments and returns a canister_event_information. This method is used to get information about the canister
 
+## Integrators
+### Subscribing to Events
+
+To receive events, an integrator needs to follow the following steps:
+
+Subscribe to the canister event using the `dl_subscribe_simple` method by providing a `subscribe_request` that includes the name of the canister method that will be called when the event is triggered and the identity of the canister that will handle the event.
+
+Handle the event in the canister method specified in the subscribe_request. The method must conform to `func (vec event) -> ()`, where event is a record representing the canister event. For example:
+
+```candid
+type event = record {
+  creator : opt principal;
+  source_method : text;
+  created_at : nat64;
+  data : vec nat8;
+};
+
+service : {
+  my_callback : (vec event) -> ();
+}
+```
+
+### Unsubscribing to Events
+Unsubscribe from the canister events using the `dl_remove_simple_subscription` method when the subscription is no longer needed.
+
+### Getting Schema Information
+To get information about the canister, the integrator can call the `dl_canister_events_information` method, which returns a canister_event_information record that includes a link to the schema of the event. Please refer to the link for more specific details about how to interpret the payload
+
+
+
 ## Candid Interface
 
 ```candid

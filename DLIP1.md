@@ -3,6 +3,7 @@
 ```
 version : v0
 interface_identifier : DL::DLIP_1
+authors : Hazel Rowell,
 ```
 
 ## References
@@ -17,7 +18,7 @@ The `dl_supports_interface_v0` method allows canisters to declare which interfac
 
 By defining a standardized format for interface identifiers, conflicts can be avoided between different standards that use similar names or abbreviations.
 
-## Specification
+## Service Specification
 
 The canister **must** implement the following Candid interface:
 

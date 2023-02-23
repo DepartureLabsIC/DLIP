@@ -4,6 +4,7 @@
 version : v0
 interface_identifier : DL::DLIP_2v0
 supports : DL::DLIP_1
+authors : Hazel Rowell,
 ```
 
 ## Summary
